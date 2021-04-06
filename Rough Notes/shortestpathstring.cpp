@@ -20,6 +20,6 @@ int main()
         if(ch == 'w')
             y--;        
     }
-    cout<<endl<<abs(x)<<endl<<abs(y);
+    cout<<endl<<x<<endl<<y;
     return 0;
 }
