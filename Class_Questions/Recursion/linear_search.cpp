@@ -1,24 +1,27 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
-int linear(int n, int a[], int i, int k){
-
+int linear_(int n, int a[], int k, int i)
+{
   // base case
-  if (i == n)
+  
+  if (n == i)
     return -1;
-  
+
   // recur case
-  if (a[i] == k)
+
+  if (a[0] == k)
     return i;
-  
-  return linear (n, a, i+1, k);
+
+  return linear_(n, a+1, k, i+1);
 }
 
+int main()
+{
+  int n=10, a[10]={1, 2, 3, 4 ,5, 6, 7, 8, 9,10}, key=7, i=0;
 
-int main(){
+  cout<<linear_(n, a, key, i);
 
-  int n=10, a[10] = {1, 2, 3, 5, 4, 6, 7, 8, 9, 0};
-  int k = 4, i=0;
-  cout << linear(n, a, i, k);
   return 0;
 }
